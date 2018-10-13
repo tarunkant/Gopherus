@@ -1,6 +1,6 @@
 # Gopherus
-If you know a place which is SSRF vulnerable then, this tool will help you to generate Gopher payload for exploiting SSRF (Server Side Request Forgery) and gaining RCE (Remote Code Execution). And also it will help you to get the Reverse shell on the victim server.  
-And you can get blog on the same [Blog on Gopherus](https://spyclub.tech/2018/blog-on-gopherus/)
+If you know a place which is SSRF vulnerable then, this tool will help you to generate Gopher payload for exploiting SSRF (Server Side Request Forgery) and gaining RCE (Remote Code Execution). And also it will help you to get the Reverse shell on the victim server. And for more 
+information you can get a blog on the same [Blog on Gopherus](https://spyclub.tech/2018/blog-on-gopherus/)
 ## About
 This tool can generate payload for following:
 1.  MySQL     (Port-3306)
