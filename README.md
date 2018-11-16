@@ -97,3 +97,4 @@ Tarunkant Gupta (SpyD3r)
 * http://blog.safebuff.com/2016/07/03/SSRF-Tips/
 * https://hackerone.com/reports/115748
 * https://www.blackhat.com/docs/us-14/materials/us-14-Novikov-The-New-Page-Of-Injections-Book-Memcached-Injections-WP.pdf
+* https://www.exploit-db.com/exploits/42392/
