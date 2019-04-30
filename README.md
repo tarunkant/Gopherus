@@ -90,7 +90,6 @@ Tarunkant Gupta (SpyD3r)
 * Email:  tarunkant05@gmail.com
 * Twitter:  https://twitter.com/TarunkantG
 * Linkedin: https://linkedin.com/in/tarunkant-g-215830129/
-* Github: https://github.com/tarunkant
 
 ## Reference
 * http://legalhackers.com/advisories/vBulletin-SSRF-Vulnerability-Exploit.txt  
