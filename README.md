@@ -4,15 +4,16 @@ information you can get a blog on the same [Blog on Gopherus](https://spyclub.te
 ## About
 This tool can generate payload for following:
 1.  MySQL     (Port-3306)
-2.  FastCGI   (Port-9000)
-3.  Memcached (Port-11211)  
+2.  PostgreSQL(Port-5432)
+3.  FastCGI   (Port-9000)
+4.  Memcached (Port-11211)  
 &nbsp;&nbsp;&nbsp;&nbsp;If stored data is getting De-serialized by: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Python <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Ruby  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* PHP   <br>
-4.  Redis     (Port-6379)
-5.  Zabbix    (Port-10050)
-6.  SMTP      (Port-25)
+5.  Redis     (Port-6379)
+6.  Zabbix    (Port-10050)
+7.  SMTP      (Port-25)
 
 ## Installation
 ``` bash
@@ -28,6 +29,7 @@ sudo ./install.sh
 |  gopherus --help         |          Help                  |
 |  gopherus --exploit      |    Arguments can be  :         |
 |                          |    --exploit mysql             |
+|			   |    --exploit postgresql	    |
 |                          |    --exploit fastcgi           |
 |                          |    --exploit redis             |
 |                          |    --exploit zabbix            |
@@ -42,6 +44,12 @@ sudo ./install.sh
 gopherus --exploit mysql
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It only asks username of the MySQL user and it will provide you gopher link.
+
+* PostgreSQL: If the user is not protected with password you can dump his database and also you can put malicious files in his system.
+```bash
+gopherus --exploit postgresql
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It only asks username of the Postgres user and database name then it will provide you gopher link.
 
 * FastCGI:  If port 9000 is open with no security then you can get RCE.
 ```bash

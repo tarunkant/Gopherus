@@ -2,11 +2,12 @@
 import argparse
 import sys
 sys.path.insert(0,'./scripts/')
-from scripts import FastCGI, MySQL, DumpMemcached, PHPMemcached, PyMemcached, RbMemcached, Redis, SMTP, Zabbix
+from scripts import FastCGI, MySQL, PostgreSQL, DumpMemcached, PHPMemcached, PyMemcached, RbMemcached, Redis, SMTP, Zabbix
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--exploit",
                         help="mysql,\n"
+                             "postgresql,\n"
                              "fastcgi,\n"
                              "redis,\n"
                              "smtp,\n"
@@ -40,6 +41,8 @@ if(not args.exploit):
 
 if(args.exploit=="mysql"):
     MySQL.MySQL()
+elif(args.exploit=="postgresql"):
+    PostgreSQL.PostgreSQL()
 elif(args.exploit=="fastcgi"):
     FastCGI.FastCGI()
 elif(args.exploit=="redis"):
