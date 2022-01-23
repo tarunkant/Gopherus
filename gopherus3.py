@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import argparse
-from ast import match_case
 import sys
 sys.path.insert(0, './scripts/')
 from scripts import FastCGI, MySQL, PostgreSQL, DumpMemcached, PHPMemcached, PyMemcached, RbMemcached, Redis, SMTP, Zabbix

@@ -4,7 +4,7 @@ information you can get a blog on the same [Blog on Gopherus](https://spyclub.te
 
 ## Note :
 
-This repo is a fork from the Original Tool but I have updated the code from python2 to python3 and added a new feature to select the port for the reverse shell(Redis).
+This repo is a fork from the Original Tool but I have updated the code from python2 to python3 (because python2 is dead) and added a new feature to select the port for the reverse shell(Redis).
 
 ## About
 This tool can generate payload for following:
