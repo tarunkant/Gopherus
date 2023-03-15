@@ -12,10 +12,10 @@ This tool can generate payload for following:
 2.  PostgreSQL(Port-5432)
 3.  FastCGI   (Port-9000)
 4.  Memcached (Port-11211)  
-&nbsp;&nbsp;&nbsp;&nbsp;If stored data is getting De-serialized by: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Python <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Ruby  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* PHP   <br>
+    - If stored data is getting De-serialized by: <br>
+        - Python <br>
+        - Ruby  <br>
+        - PHP   <br>
 5.  Redis     (Port-6379)
 6.  Zabbix    (Port-10050)
 7.  SMTP      (Port-25)
