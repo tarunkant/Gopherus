@@ -1,6 +1,7 @@
 #!/usr/bin/python2
 import argparse
 import sys
+import readline
 sys.path.insert(0,'./scripts/')
 from scripts import FastCGI, MySQL, PostgreSQL, DumpMemcached, PHPMemcached, PyMemcached, RbMemcached, Redis, SMTP, Zabbix
 
