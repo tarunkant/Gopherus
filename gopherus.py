@@ -1,6 +1,12 @@
 #!/usr/bin/python2
 import argparse
 import sys
+import readline  # see below
+# solve: https://bugs.python.org/issue45511
+# need ncurses lib (-lncurses)
+# ubuntu/debian:
+# sudo apt-get install libncurses5-dev libncursesw5-dev
+
 sys.path.insert(0,'./scripts/')
 from scripts import FastCGI, MySQL, PostgreSQL, DumpMemcached, PHPMemcached, PyMemcached, RbMemcached, Redis, SMTP, Zabbix
 
