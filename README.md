@@ -16,6 +16,7 @@ This tool can generate payload for following:
 7.  SMTP      (Port-25)
 
 ## Installation
+Requires Python 3 (`python3` must be available on your system).
 ``` bash
 chmod +x install.sh
 ```
